@@ -15,3 +15,7 @@ print(f"data is {data}")
 
 index = VectorstoreIndexCreator().from_loaders([loader])
 print(index.query(query))
+
+#python langchain_gpt.py "Summarize the attitude towards vaccine"
+# pip install chromadb
+# error: Microsoft Visual C++ 14.0 or greater is required. Get it with "Microsoft C++ Build Tools": https://visualstudio.microsoft.com/visual-cpp-build-tools/
