@@ -55,6 +55,7 @@ def main():
 
     # Query index
     query_index(index)
+    # save_index(index)
 
 
 if __name__ == '__main__':

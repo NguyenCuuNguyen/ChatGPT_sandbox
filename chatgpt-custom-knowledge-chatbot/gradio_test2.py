@@ -3,7 +3,7 @@ import openai
 import gradio as gr
 
 #get user chat history & store it in a list and add it to previous state
-openai.api_key = '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'
+openai.api_key = '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'
 prompt = "what's America's HPV sentiment?"
 def api_calling(prompt):
     completion = openai.Completion.create(
