@@ -43,8 +43,8 @@ def run_chatbot(input_text, context=[]):
     response = query_engne.query(input_text)
     context.append((input_text, response.response))
     #returning the response
-    return response.response, context
-
+    # return response.response, context
+    return gr.update(value=""), context
 
 def upload_file(files):
     # path = "/home/ubuntu/temps/" + os.path.basename(fileobj)  #NB*
@@ -72,11 +72,14 @@ def create_gradio_interface():
             chatbot = gr.Chatbot() #chatbot component
             # state = gr.State([]) #session state persisting across multiple submits
             with gr.Row():
+                clear = gr.Button("Clear")
                 txt = gr.Textbox(
                     show_label=False,
                     placeholder="Enter your question and press enter"
                 ).style(container=False)
+                print(f"txt is {txt}")
             txt.submit(run_chatbot, [txt, chatbot], [txt, chatbot])
+            clear.click(lambda: None, None, chatbot, queue=False)
 
         with gr.Tab("Upload file"):
             #gr.Row == horizontally:
