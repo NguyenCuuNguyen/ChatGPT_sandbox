@@ -12,7 +12,7 @@ import sys
 import os
 
 #https://cookbook.openai.com/examples/how_to_handle_rate_limits
-os.environ["OPENAI_API_KEY"] = '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'
+os.environ["OPENAI_API_KEY"] = ''
 
 openai = ChatOpenAI(model_name="gpt-3.5-turbo", openai_api_key='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')
 

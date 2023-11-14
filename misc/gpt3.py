@@ -3,7 +3,7 @@ from langchain import OpenAI
 import gradio
 import os
 
-os.environ["OPENAI_API_KEY"] = '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'
+os.environ["OPENAI_API_KEY"] = ''
 
 def construct_index(directory_path):
     # set number of output tokens

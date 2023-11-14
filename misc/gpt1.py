@@ -5,10 +5,10 @@ import gradio.components
 import os
 import openai
 
-os.environ["OPENAI_API_KEY"] = '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'
+os.environ["OPENAI_API_KEY"] = ''
 
 def construct_index(directory_path):
-    openai.api_key = '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'
+    openai.api_key = ''
     max_input_size = 4096
     num_outputs = 512
     chunk_size_limit = 600
