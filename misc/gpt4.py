@@ -72,12 +72,12 @@ def create_gradio_interface():
             chatbot = gr.Chatbot() #chatbot component
             # state = gr.State([]) #session state persisting across multiple submits
             with gr.Row():
-                clear = gr.Button("Clear")
                 txt = gr.Textbox(
                     show_label=False,
                     placeholder="Enter your question and press enter"
                 ).style(container=False)
                 print(f"txt is {txt}")
+                clear = gr.Button("Clear")
             txt.submit(run_chatbot, [txt, chatbot], [txt, chatbot])
             clear.click(lambda: None, None, chatbot, queue=False)
 
